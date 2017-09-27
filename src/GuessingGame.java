@@ -15,6 +15,7 @@ public class GuessingGame {
 			userGuess = Integer.parseInt(input);
 			//JOptionPane.showMessageDialog(null, "Your guess was " + userGuess + ".");
 			if (userGuess == -1){
+				JOptionPane.showMessageDialog(null, "You have chosen to leave the program.");
 				break;
 			}
 			else if (userGuess < 0 || userGuess > 100){
@@ -24,8 +25,8 @@ public class GuessingGame {
 			
 			else if (userGuess > computerNum){
 				if (userGuess - 10 <= computerNum) {
-					JOptionPane.showMessageDialog(null, "Your guess a little too high; "
-							+ "within 10 of the number! Guess a little lower.");
+					JOptionPane.showMessageDialog(null, "Your guess a little too high, "
+							+ " but within 10 of the number! Guess a little lower.");
 					//guessCount ++; 
 					//return guessCount;
 				}
@@ -38,7 +39,7 @@ public class GuessingGame {
 			}
 			else if (userGuess < computerNum) {
 				if (userGuess + 10 >= computerNum) {
-					JOptionPane.showMessageDialog(null, "Your guess was a little too low; "
+					JOptionPane.showMessageDialog(null, "Your guess was a little too low, "
 							+ "but within 10 of the number! Guess a little higher.");
 				}
 				else {
